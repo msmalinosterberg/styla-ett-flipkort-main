@@ -1,0 +1,66 @@
+/* Övningen går ut på att styla ditt egna flipkort och testa på
+CSS-animationer. Prova att ge kortet en annan höjd, bredd,
+position, text och färg. Kanske vill du ha en bild på kortet?
+Eller varför inte duplicera HTML-koden för att skapa flera kort? 
+*/
+
+/* Flexbox för att centrera kortet*/
+body {
+	display: flex;
+	justify-content: center;
+	background-color: rgb(255, 243, 221);
+}
+
+/* Det här är stylingen på kortet. Bakgrunden är transparent för
+att det ska se ut som att kortet vänder sig. 
+*/
+.card {
+	background-color: transparent;
+	width: 150px;
+  height: 200px;
+
+  /* Detta skapar en 3d-effekt på kortet när det vänds*/
+	perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+	width: 100%;
+  height: 100%;
+	transition: transform 0.8s;
+  text-align: center;
+
+  /* Detta får kortet dubbelsidigt, prova att ta bort raden
+  för att se vad som händer */
+  transform-style: preserve-3d;
+  border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Denna stylingen får kortet att vända sig när man hovrar över det */
+.card:hover .card-inner {
+	transform: rotateY(180deg);
+}
+
+.card-front {
+	position: absolute;
+	width: 100%;
+  height: 100%;
+
+  /* Denna kod döljer framsidan av kortet när det vänds*/
+	backface-visibility: hidden;
+  background-color: hotpink;
+  border-radius: 10px;
+}
+
+.card-back {
+	position: absolute;
+	width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+  /* Denna kod döljer baksidan av kortet när det vänds*/
+	backface-visibility: hidden;
+	background-color: white;
+  transform: rotateY(180deg);
+}
