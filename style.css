@@ -7,7 +7,7 @@ Eller varför inte duplicera HTML-koden för att skapa flera kort?
 /* Flexbox för att centrera kortet*/
 body {
 	display: flex;
-	justify-content: center;
+  justify-content: center;
 	background-color: rgb(255, 243, 221);
 }
 
@@ -16,12 +16,14 @@ att det ska se ut som att kortet vänder sig.
 */
 .card {
 	background-color: transparent;
-	width: 150px;
-  height: 200px;
-
+	width: 250px;
+  height: 320px;
   /* Detta skapar en 3d-effekt på kortet när det vänds*/
-	perspective: 1000px;
+  perspective: 1000px;
+  
 }
+
+
 
 .card-inner {
   position: relative;
@@ -29,6 +31,7 @@ att det ska se ut som att kortet vänder sig.
   height: 100%;
 	transition: transform 0.8s;
   text-align: center;
+  
 
   /* Detta får kortet dubbelsidigt, prova att ta bort raden
   för att se vad som händer */
@@ -49,7 +52,7 @@ att det ska se ut som att kortet vänder sig.
 
   /* Denna kod döljer framsidan av kortet när det vänds*/
 	backface-visibility: hidden;
-  background-color: hotpink;
+  background-color: #E0AA3E;
   border-radius: 10px;
 }
 
