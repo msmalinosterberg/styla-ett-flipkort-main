@@ -6,8 +6,12 @@ Eller varför inte duplicera HTML-koden för att skapa flera kort?
 
 /* Flexbox för att centrera kortet*/
 body {
+  height: 100%; 
+  
+  margin: 10rem; 
 	display: flex;
   justify-content: center;
+  align-items: center;
 	background-color: rgb(255, 243, 221);
 }
 
