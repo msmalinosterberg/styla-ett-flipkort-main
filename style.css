@@ -9,8 +9,9 @@ body {
   height: 100%; 
   margin: 10rem; 
 	display: flex;
-  background-color: rgb(255, 243, 221);
+  background-color: #D0D5D0;
   font-family:'Roboto', sans-serif;
+  color: black; 
 }
 
 
@@ -29,6 +30,7 @@ att det ska se ut som att kortet vänder sig.
   height: 320px;
   /* Detta skapar en 3d-effekt på kortet när det vänds*/
   perspective: 1000px;
+  padding: 1rem;
   
 }
 
@@ -61,7 +63,7 @@ att det ska se ut som att kortet vänder sig.
 
   /* Denna kod döljer framsidan av kortet när det vänds*/
 	backface-visibility: hidden;
-  background-color: #E0AA3E;
+  background-color: #9FA39F;
   border-radius: 10px;
 }
 
@@ -75,4 +77,9 @@ att det ska se ut som att kortet vänder sig.
 	backface-visibility: hidden;
 	background-color: white;
   transform: rotateY(180deg);
+}
+
+h1 {
+  text-transform: uppercase;
+  padding: 1rem;
 }
